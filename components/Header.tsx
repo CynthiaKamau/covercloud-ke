@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
       toast.error(error?.message);
       console.log(error);
     } else {
-      toast.success('Logged out')
+      toast.success("Logged out");
     }
   };
 

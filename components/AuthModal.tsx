@@ -18,17 +18,17 @@ const AuthModal = () => {
   const { onClose, isOpen } = useAuthModal();
 
   const onChange = (open: boolean) => {
-    if(!open) {
+    if (!open) {
       onClose();
     }
-  }
+  };
 
   useEffect(() => {
-    if(session) {
+    if (session) {
       router.refresh();
       onClose();
     }
-  }, [session, router, onClose])
+  }, [session, router, onClose]);
 
   return (
     <Modal
@@ -37,21 +37,21 @@ const AuthModal = () => {
       isOpen={isOpen}
       onChange={onChange}
     >
-      <Auth 
+      <Auth
         theme="dark"
         magicLink
-        providers={['github']}
+        providers={["github"]}
         supabaseClient={supabaseClient}
-        appearance={{ 
+        appearance={{
           theme: ThemeSupa,
           variables: {
             default: {
               colors: {
-                brand: '#404040',
-                brandAccent: '#22c55e'
-              }
-            }
-          } 
+                brand: "#404040",
+                brandAccent: "#22c55e",
+              },
+            },
+          },
         }}
       />
     </Modal>
