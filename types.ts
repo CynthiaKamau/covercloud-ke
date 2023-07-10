@@ -1,3 +1,4 @@
+import { StripeLinkAuthenticationElement } from "@stripe/stripe-js";
 import Stripe from "stripe";
 
 export interface UserDetails {
@@ -9,6 +10,15 @@ export interface UserDetails {
   billing_address?: Stripe.Address;
   payment_method?: Stripe.PaymentMethod[Stripe.PaymentMethod.Type];
 };
+
+export interface Song {
+  id: string;
+  user_id: string;
+  author: string;
+  title: string;
+  song_path: string;
+  image_path: StripeLinkAuthenticationElement;
+}
 
 export interface Product {
   id: string;
