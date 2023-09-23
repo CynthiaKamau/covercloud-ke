@@ -43,9 +43,6 @@ const UploadModal = () => {
       const imgFile = values?.image?.[0];
       const songFile = values?.song?.[0];
 
-      console.log("img", imgFile)
-      console.log("song", songFile)
-
       if (!imgFile || !songFile || !user) {
         toast.error("Missing fields!");
         return;

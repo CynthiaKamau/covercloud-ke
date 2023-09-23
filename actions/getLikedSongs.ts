@@ -18,7 +18,6 @@ const getLikedSongs = async (): Promise<Song[]> => {
     .order("created_at", { ascending: false });
 
   if (error) {
-    console.log(error.message);
     return [];
   }
 

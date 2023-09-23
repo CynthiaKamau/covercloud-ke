@@ -12,7 +12,6 @@ interface SongItemProps {
 }
 const SongItem: React.FC<SongItemProps> = ({ song, onClick }) => {
   const imagePath = useLoadImage(song);
-  console.log("---h", imagePath);
 
   return (
     <div
