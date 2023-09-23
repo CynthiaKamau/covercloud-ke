@@ -5,7 +5,8 @@ const nextConfig = {
       "xqvmpewllcstavqprljj.supabase.co"
     ]
   },
-  basePath: '/github-pages'
+  basePath: '/github-pages',
+  output: 'export'
 }
 
 module.exports = nextConfig
