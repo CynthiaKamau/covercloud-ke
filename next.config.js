@@ -4,7 +4,8 @@ const nextConfig = {
     domains: [
       "xqvmpewllcstavqprljj.supabase.co"
     ]
-  }
+  },
+  basePath: '/github-pages'
 }
 
 module.exports = nextConfig
